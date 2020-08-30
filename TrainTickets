@@ -1,0 +1,25 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract TrainTickets{
+    string name;
+    int noofstations;
+    int noofcustomers; 
+    int ticketssold;
+    int totalcollection;
+    int reservedseats;
+    int unreservedseats;
+    function TrainTickets( string newname, int newnoofstations, int newnoofcustomers,int  newticketssold,int newtotalcollection, int newreservedseats,
+    int newunreservedseats) public {
+        
+        name = newname;
+        noofstations = newnoofstations;
+        noofcustomers = newnoofcustomers;
+        ticketssold = newticketssold;
+        totalcollection = newtotalcollection;
+        reservedseats = newreservedseats;
+        unreservedseats = newunreservedseats;
+    }
+    function getTrainTickets() public view returns(string,int,int,int,int,int,int) {
+        return(name, noofstations, noofcustomers, ticketssold, totalcollection, reservedseats,unreservedseats);
+    }
+}
+  
