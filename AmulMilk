@@ -1,0 +1,25 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract AmulMilk{
+    string name;
+    int noofcustomers;
+    int noofproducts; 
+    int    varities;
+    int    totalprofit;
+    int amountinvested;
+    string monthsold;
+    function AmulMilk( string newname, int newnoofcustomers, int newnoofproducts,int newvarities,int newtotalprofit, int newamountinvested,
+    string newmonthsold) public {
+        
+        name = newname;
+        noofcustomers = newnoofcustomers;
+        noofproducts = newnoofproducts;
+        varities = newvarities;
+        totalprofit = newtotalprofit;
+        amountinvested = newamountinvested;
+        monthsold = newmonthsold;
+    }
+    function getAmulMilk() public view returns(string,int,int,int,int,int, string) {
+        return(name, noofcustomers, noofproducts, varities, totalprofit, amountinvested,monthsold);
+    }
+}
+  
